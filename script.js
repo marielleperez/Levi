@@ -16,3 +16,4 @@ window.onload = function() {
         }
     }, 20); // Set the interval speed
 };
+
