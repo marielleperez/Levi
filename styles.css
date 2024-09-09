@@ -1,41 +1,49 @@
+/* Body Styles */
 body {
     font-family: 'Georgia', serif;
-    background-color: #eaf2f8;
+    background: linear-gradient(135deg, #a2d9ff, #1e90ff);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
+/* Invitation Card */
 .invitation-card {
     background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     width: 450px;
     padding: 40px;
     text-align: center;
-    border: 3px solid #dfe4ea;
-    opacity: 0;
-    transform: translateY(50px);
+    border: 5px solid #1e90ff;
+    position: relative;
+    animation: bounceIn 2s ease;
+    transition: transform 0.4s ease;
+}
+
+.invitation-card:hover {
+    transform: translateY(-10px);
 }
 
 h1 {
     font-size: 2.5em;
-    color: #4a90e2;
+    color: #1e90ff;
     margin-bottom: 20px;
 }
 
 p {
     font-size: 1.3em;
-    color: #555;
+    color: #2f3542;
     line-height: 1.6;
 }
 
 .highlight {
     font-size: 1.4em;
-    color: #4a90e2;
+    color: #1e90ff;
     font-weight: bold;
 }
 
@@ -43,26 +51,180 @@ p {
     margin: 20px 0;
 }
 
+/* Button Styling */
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #4a90e2;
+    padding: 12px 25px;
+    background-color: #1e90ff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 30px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: #376fa1;
+    background-color: #104e8b;
+    box-shadow: 0 0 15px #1e90ff;
     transform: translateY(-5px);
-    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Footer Styling */
 .footer {
     margin-top: 50px;
     font-size: 0.9em;
     color: #888;
+}
+
+/* Decoration: Rotating Stars */
+.decoration {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background: url('https://www.svgrepo.com/show/69820/star.svg') no-repeat center;
+    background-size: cover;
+    animation: rotateStar 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes rotateStar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Body Styles */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #a2d9ff, #1e90ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Invitation Card */
+.invitation-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    padding: 40px;
+    text-align: center;
+    border: 5px solid #1e90ff;
+    position: relative;
+    animation: bounceIn 2s ease;
+    transition: transform 0.4s ease;
+}
+
+.invitation-card:hover {
+    transform: translateY(-10px);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #1e90ff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.3em;
+    color: #2f3542;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-size: 1.4em;
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+.message {
+    margin: 20px 0;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #104e8b;
+    box-shadow: 0 0 15px #1e90ff;
+    transform: translateY(-5px);
+}
+
+/* Footer Styling */
+.footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Decoration: Rotating Stars */
+.decoration {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background: url('https://www.svgrepo.com/show/69820/star.svg') no-repeat center;
+    background-size: cover;
+    animation: rotateStar 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes rotateStar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
