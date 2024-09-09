@@ -7,8 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Invitation Card */
@@ -17,12 +17,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     width: 450px;
+    max-width: 90%; /* Ensure card fits on smaller screens */
     padding: 40px;
     text-align: center;
     border: 5px solid #1e90ff;
     position: relative;
     animation: bounceIn 2s ease;
     transition: transform 0.4s ease;
+    overflow: hidden; /* Hide overflowing elements */
 }
 
 .invitation-card:hover {
@@ -30,19 +32,19 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: #1e90ff;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: #2f3542;
     line-height: 1.6;
 }
 
 .highlight {
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: #1e90ff;
     font-weight: bold;
 }
@@ -111,6 +113,72 @@ p {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Smaller tablets and phones */
+    body {
+        padding: 20px;
+    }
+
+    .invitation-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .highlight {
+        font-size: 1.2em;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Very small devices (phones) */
+    .invitation-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .highlight {
+        font-size: 1.1em;
+    }
+
+    .button {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+}
+
+/* Scroll for small screens */
+@media (max-height: 600px) {
+    body {
+        height: auto;
+        padding: 10px;
+        display: block;
+        overflow-y: auto; /* Enable vertical scroll */
     }
 }
 /* Body Styles */
@@ -122,8 +190,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Invitation Card */
@@ -132,12 +200,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     width: 450px;
+    max-width: 90%; /* Ensure card fits on smaller screens */
     padding: 40px;
     text-align: center;
     border: 5px solid #1e90ff;
     position: relative;
     animation: bounceIn 2s ease;
     transition: transform 0.4s ease;
+    overflow: hidden; /* Hide overflowing elements */
 }
 
 .invitation-card:hover {
@@ -145,19 +215,19 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: #1e90ff;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: #2f3542;
     line-height: 1.6;
 }
 
 .highlight {
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: #1e90ff;
     font-weight: bold;
 }
@@ -226,5 +296,71 @@ p {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Smaller tablets and phones */
+    body {
+        padding: 20px;
+    }
+
+    .invitation-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .highlight {
+        font-size: 1.2em;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Very small devices (phones) */
+    .invitation-card {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .highlight {
+        font-size: 1.1em;
+    }
+
+    .button {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+}
+
+/* Scroll for small screens */
+@media (max-height: 600px) {
+    body {
+        height: auto;
+        padding: 10px;
+        display: block;
+        overflow-y: auto; /* Enable vertical scroll */
     }
 }
